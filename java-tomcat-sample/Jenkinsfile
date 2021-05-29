@@ -11,10 +11,12 @@ pipeline {
                     archiveArtifacts artifacts: '**/*.war'
                 }
             }
-        stage('Deploy in Staging Environment'){
+        tage('Deploy in Staging Environment'){
+            steps{
             build job: 'deploy-to-test-env'
-            }
+                }
+            }   
         }   
     }
 }
-
+  
