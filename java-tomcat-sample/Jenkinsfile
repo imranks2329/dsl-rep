@@ -12,9 +12,11 @@ pipeline {
                 }
             }
         stage('Deploy in Staging Environment'){
-            build job: 'deploy-to-test-env'
+            steps {
+                build job: 'deploy-to-test-env'
             }
-        }   
-    }
+                }
+        }
+    }   
 }
-  
+
